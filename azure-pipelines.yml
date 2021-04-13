@@ -1,4 +1,8 @@
 # Docker
+- task: CopyFiles@2
+  inputs:
+    Contents: 'deployment.azure.yaml'
+    TargetFolder: 'safwenit/angular-app:$(Build.BuildId)'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
