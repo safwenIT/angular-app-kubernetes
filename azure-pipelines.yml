@@ -1,4 +1,12 @@
 # Docker
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '- task: CopyFiles@2
+  inputs:
+    Contents: 'deployment.azure.yaml'
+    TargetFolder: 'https://hub.docker.com/repositories$:(Build.ArtifactStagingDirectory)''
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
